@@ -1,6 +1,6 @@
-# Comandos
+# Comandos Genéricos
 
-Abaixo estão colocados alguns comandos que podem ser usados em um terminal cujo contexto está como MongoDB.
+Abaixo estão colocados alguns comandos genéricos da base de dados MongoDB.
 
 ---
 
