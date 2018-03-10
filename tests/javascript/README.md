@@ -4,7 +4,7 @@ Abaixo listam-se os pacotes de testes disponíveis para JavaScript.
 
 Atualmente, estão listados:
 
-- [Mocha]().
+- [Mocha](#mocha).
 
 ## Mocha
 
