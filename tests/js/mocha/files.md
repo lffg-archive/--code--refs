@@ -58,7 +58,7 @@ Correntes são métodos que podem vir especificando um comportamento específico
 Irá executar somente aquele bloco durante o teste.
 
 Por exemplo:
-```javascript{6}
+```javascript
 describe('main', () => {
   it('should fail', () => {
     throw new Error('just an error');
