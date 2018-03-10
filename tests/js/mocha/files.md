@@ -51,7 +51,7 @@ ___Nota:__ Se uma exceção for jogada dentro do `it`, o teste não passará._
 
 # Correntes
 
-Correntes são métodos que podem vir especificando um comportamento específico para determinado bloco.
+Correntes são métodos que podem vir trazendo um comportamento específico para um determinado bloco.
 
 ## `.only`
 
@@ -70,4 +70,26 @@ describe('main', () => {
 });
 ```
 
-No exemplo acima, nenhum erro ocorrerá, mesmo com a exceção sendo jogada, tendo em vista que o único teste que rodará é o _`'should pass'`_, tendo em vista que colocamos, em corrente, o método `.only`, o que fará com que somente este teste seja executado.
+No exemplo acima, nenhum erro ocorrerá, tendo em vista que o único método que será executado não executará nenhum erro.  
+Somente o teste `should pass` será executado tendo em vista que ele vêm em seguida do método `.only`.
+No exemplo em questão, somente um teste ocorrerá — e passará.
+
+## `.skip`
+
+Irá pular a execução daquele bloco.
+
+Por exemplo:
+```javascript
+describe('main', () => {
+  it.skip('should fail', () => {
+    throw new Error('just an error');
+  });
+  
+  it('should pass', () => {
+    // Test will pass here.
+  });
+});
+```
+
+No exemplo acima, nenhum erro ocorrerá, tendo em vista que pulamos o método que traria o erro.  
+No exemplo em questão, somente um teste ocorrerá — e passará.
